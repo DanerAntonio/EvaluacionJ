@@ -1,0 +1,533 @@
+
+ARRAY
+
+
+//llenar un array que solicite n numeros enteros
+//en el array guardar su doble
+
+
+	import java.util.Scanner;
+
+	public class Main {
+	    public static void main(String[] args) {
+	        Scanner scanner = new Scanner(System.in);
+
+	        System.out.print("Ingrese la cantidad de numeros enteros que desea ingresar: ");
+	        int n = Integer.parseInt(scanner.nextLine());
+
+	        int[] numeros = new int[n];
+	        int[] dobles = new int[n];
+	        
+
+	        System.out.println("Ingrese los numeros enteros:");
+	        for (int i = 0; i < n; i++) {
+	            numeros[i] = Integer.parseInt(scanner.nextLine());
+	            dobles[i] = numeros[i] * 2;
+	        }
+	        int sumadobles = 0;
+	        System.out.println("Los numero ingresados y sus dobles son:");
+	        for (int i = 0; i < n; i++) {
+	            System.out.println(numeros[i] + " su doble es : " + dobles[i]);
+	            sumadobles += dobles[i];
+	        }
+	        System.out.println("la suma de los dobles es igual:" + sumadobles);
+	    }
+	}
+	
+
+
+
+
+
+// TODO Auto-generated method stub 
+// crear un array que permita ingresar n nombres de productos listar los
+// productos en mayusculas
+
+import java.util.Scanner;
+
+/*public class Main {
+
+/*	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner scanner = new Scanner(System.in);
+
+		
+		System.out.print("ingrese el numero de productos: ");
+		int cantidadProductos = scanner.nextInt();
+		scanner.nextLine();
+
+		
+		String[] productos = new String[cantidadProductos];
+
+		
+		for (int i = 0; i < cantidadProductos; i++) {
+			System.out.print("ingrese el nombre del producto " + (i + 1) );
+			productos[i] = scanner.nextLine();
+		}
+
+		
+		System.out.println("\nLista de productos en mayusculas:");
+		for (String producto : productos) {
+			System.out.println(producto.toUpperCase());
+
+		}
+	}*/
+
+
+
+
+
+// un array lis es un array dinamico
+//manipulacion del array list
+// realizar un CRUD para la manipulacion
+		
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		ArrayList<String>  Productos = new ArrayList();
+		Scanner leer = new Scanner(System.in);
+		System.out.println("********Gestion de Productos*******"); 
+		String opcion ="";
+		//operadores logicos Y &&, O ||, N0 !
+		while(!opcion.equals("5")) { //mientras la opcion no sea 5
+			System.out.println("********Gestion de Productos*******");
+			System.out.println("1.Registrar");
+			System.out.println("2.Listar");
+			System.out.println("3.Actulizar");
+			System.out.println("4.Eliminar");
+			System.out.println("5.Digite una opcion");
+			opcion = leer.nextLine();
+			switch(opcion) {
+			
+
+			case "1":
+				System.out.println("Digita el nombre del produto");
+				String nombre = leer.nextLine();
+				RegistrarProducto(Productos,nombre);
+				
+			break;
+
+			case "2":
+				ListarProducto(Productos);
+			break;
+			
+			case "3":
+			break;
+			case "4":
+			break;
+			default:
+				break;
+			}
+		
+		}
+			leer.close();
+			System.out.println("******Fin del programa*****");
+			
+		
+	}
+
+	static void RegistrarProducto(ArrayList<String> Productos, String nombre) {
+		Productos.add(nombre);
+		System.out.println("producto registrado correctamente");
+	}
+
+	static void ListarProducto(ArrayList<String> Productos) {
+		System.out.println(Productos);
+}
+}
+
+
+				CICLOS
+
+
+/*public class Ciclos {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//imprimir los numeros del 1 al 100
+		
+	/*	for(int i = 1; i<= 100; i ++) {
+		System.out.println(i);
+
+	}
+
+}
+}*/
+/* //ahora sumarlos
+int suma = 0;
+for(int i = 1; i<= 100; i ++) {
+	suma += i;}
+System.out.println("la suma de los numeros del 1 al 100 es:" + suma);
+}
+}*/
+/*//ahora imprimir solo los pares
+for(int i = 2; i<= 100;i+=2) {
+	System.out.println(i);
+}
+}
+}*/
+ //ahoara sumar los numeros pares 
+		
+/*int suma = 0;
+for(int i = 2; i<= 100;i+=2) {
+	suma +=i;
+}
+	System.out.println("la suma de los nuemros pares del 2 al 100 es:"+suma);
+}
+}	
+*/
+//imprimir losmultiplos de 45 en un rango de 1000
+
+/*int limite = 1000;
+int numero = 45;
+System.out.println("los multiplos de "+numero+ "hasta" + limite+ "son:");
+int i = numero;
+while(i<= limite) {
+	System.out.println(i);
+	i+=numero;
+	
+}	
+}
+}*/
+
+//contep regresivo hasta 1
+
+/*import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingrese un número para iniciar el conteo regresivo: ");
+        int numero = scanner.nextInt();
+        
+        System.out.println("Conteo regresivo desde " + numero + " hasta 1:");
+        for (int i = numero; i >= 1; i--) {
+            System.out.println(i);
+        }
+    }
+}*/
+
+
+//imprime los numeros del 1 al 5 con for , while,do while
+/*public class Main {
+    public static void main(String[] args) {
+        // Usando un bucle for para imprimir los números del 1 al 5
+        for (int i = 1; i <= 5; i++) {
+            System.out.println(i);
+        }
+
+        // Usando un bucle while para imprimir los números del 1 al 5
+        int j = 1;
+        while (j <= 5) {
+            System.out.println(j);
+            j++;
+        }
+
+        // Usando un bucle do-while para imprimir los números del 1 al 5
+        int k = 1;
+        do {
+            System.out.println(k);
+            k++;
+        } while (k <= 5);
+    }
+}*/
+
+//Factorial de un número dado:
+
+/*import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingrese un número: ");
+        int numero = scanner.nextInt();
+        
+        int factorial = 1;
+        for (int i = 1; i <= numero; i++) {
+            factorial *= i;
+        }
+        System.out.println("El factorial de " + numero + " es: " + factorial);
+    }
+}*/
+
+//Tabla de multiplicar de un número dado:
+
+/*import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingrese un número para ver su tabla de multiplicar: ");
+        int numero = scanner.nextInt();
+        
+        System.out.println("Tabla de multiplicar de " + numero + ":");
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(numero + " x " + i + " = " + (numero * i));
+        }
+    }
+}*/
+
+
+
+				CONDICIONALES
+
+
+import java.util.Scanner;
+
+public class FinalesCondicionales {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//Condición simple (if-else):
+		    
+		        Scanner scanner = new Scanner(System.in);
+		        System.out.print("Ingrese un número: ");
+		        int numero = scanner.nextInt();
+		        
+		        if (numero % 2 == 0) {
+		            System.out.println(numero + " es un número par.");
+		        } else {
+		            System.out.println(numero + " es un número impar.");
+		        }
+		    }
+		}
+
+
+//Condición múltiple (if-else if-else):
+
+/*import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingrese un número: ");
+        int numero = scanner.nextInt();
+        
+        if (numero > 0) {
+            System.out.println(numero + " es un número positivo.");
+        } else if (numero < 0) {
+            System.out.println(numero + " es un número negativo.");
+        } else {
+            System.out.println(numero + " es igual a cero.");
+        }
+    }
+}*/
+
+//Anidamiento de condicionales:
+
+/*import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingrese un número: ");
+        int numero = scanner.nextInt();
+        
+        if (numero >= 0) {
+            if (numero == 0) {
+                System.out.println("El número es igual a cero.");
+            } else {
+                System.out.println("El número es positivo.");
+            }
+        } else {
+            System.out.println("El número es negativo.");
+        }
+    }
+}*/
+
+//Condición ternaria:
+
+/*import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingrese un número: ");
+        int numero = scanner.nextInt();
+        
+        String resultado = (numero % 2 == 0) ? "par" : "impar";
+        System.out.println(numero + " es un número " + resultado + ".");
+    }
+}*/
+
+//Mayor de dos números:
+
+/*import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingrese el primer número: ");
+        int numero1 = scanner.nextInt();
+        System.out.print("Ingrese el segundo número: ");
+        int numero2 = scanner.nextInt();
+
+        if (numero1 > numero2) {
+            System.out.println(numero1 + " es mayor que " + numero2);
+        } else if (numero2 > numero1) {
+            System.out.println(numero2 + " es mayor que " + numero1);
+        } else {
+            System.out.println("Los dos números son iguales.");
+        }
+    }
+}*/
+
+//Día de la semana:
+
+/*import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingrese un número del 1 al 7: ");
+        int dia = scanner.nextInt();
+
+        switch (dia) {
+            case 1:
+                System.out.println("Lunes");
+                break;
+            case 2:
+                System.out.println("Martes");
+                break;
+            case 3:
+                System.out.println("Miércoles");
+                break;
+            case 4:
+                System.out.println("Jueves");
+                break;
+            case 5:
+                System.out.println("Viernes");
+                break;
+            case 6:
+                System.out.println("Sábado");
+                break;
+            case 7:
+                System.out.println("Domingo");
+                break;
+            default:
+                System.out.println("Número inválido. Ingrese un número del 1 al 7.");
+        }
+    }
+}
+*/
+
+//Edad mínima para votar:
+
+/*import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingrese su edad: ");
+        int edad = scanner.nextInt();
+
+        if (edad >= 18) {
+            System.out.println("¡Eres elegible para votar!");
+        } else {
+            System.out.println("Debes tener al menos 18 años para votar.");
+        }
+    }
+}
+*/
+
+//Categoría de edad:
+
+/*import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingrese su edad: ");
+        int edad = scanner.nextInt();
+
+        if (edad < 0) {
+            System.out.println("La edad no puede ser negativa.");
+        } else if (edad < 12) {
+            System.out.println("Eres un niño.");
+        } else if (edad < 18) {
+            System.out.println("Eres un adolescente.");
+        } else if (edad < 65) {
+            System.out.println("Eres un adulto.");
+        } else {
+            System.out.println("Eres un adulto mayor.");
+        }
+    }
+}
+*/
+
+//Calificación de un examen:
+/*import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingrese su calificación en el examen: ");
+        int calificacion = scanner.nextInt();
+
+        if (calificacion >= 60) {
+            System.out.println("¡Felicidades! Has aprobado el examen.");
+        } else {
+            System.out.println("Lo siento, has reprobado el examen.");
+        }
+    }
+}
+*/
+//Número positivo, negativo o cero:
+
+/*import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingrese un número: ");
+        int numero = scanner.nextInt();
+
+        if (numero > 0) {
+            System.out.println("El número es positivo.");
+        } else if (numero < 0) {
+            System.out.println("El número es negativo.");
+        } else {
+            System.out.println("El número es cero.");
+        }
+    }
+}
+*/
+
+//Mayor de tres números:
+
+/*import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ingrese tres números:");
+        int numero1 = scanner.nextInt();
+        int numero2 = scanner.nextInt();
+        int numero3 = scanner.nextInt();
+
+        if (numero1 >= numero2 && numero1 >= numero3) {
+            System.out.println(numero1 + " es el mayor.");
+        } else if (numero2 >= numero1 && numero2 >= numero3) {
+            System.out.println(numero2 + " es el mayor.");
+        } else {
+            System.out.println(numero3 + " es el mayor.");
+        }
+    }
+}*/
+
+
+
+
+
+
+
+
+
